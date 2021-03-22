@@ -1,0 +1,17 @@
+#relative {
+    position: relative;
+}
+#background {
+    height: 95%;
+    width: 95%;
+}
+#bird {
+    height: 30%;
+    width: 30%;
+    right: 100px;
+    position: absolute;
+    transition: all 2s ease;
+}
+#bird.action {   
+    transform: translateX(-1000px) translateY(500px) scale(-1, 1);
+}

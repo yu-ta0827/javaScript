@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="relative">
+        <img id="background" src="bg_moon_sky_mikaduki_building.jpeg" alt="">
+        <img id="bird" src="bird_aoitori_bluebird.png" alt="">
+    </div>
+    <br>
+    <input type="button" value="鳥を飛ばす" id="button">
+    <script>
+        let bird = document.getElementById('bird');
+        let btn = document.getElementById('button');
+
+        btn.onclick = function() {
+            bird.classList.toggle("action");
+            alert('鳥が飛びます！')
+        }
+    </script>
+</body>
+</html>
