@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 画像 -->
     <div id="relative">
+        <!-- 背景 -->
         <img id="background" src="bg_moon_sky_mikaduki_building.jpeg" alt="">
+        <!-- 鳥 -->
         <img id="bird" src="bird_aoitori_bluebird.png" alt="">
     </div>
     <br>
+    <!-- ボタン -->
     <input type="button" value="鳥を飛ばす" id="button">
+
+    <!-- ここからがjavascript! -->
     <script>
+        // 変数birdにIDのbirdを入れてる
         let bird = document.getElementById('bird');
+        // 変数btnにIDのbuttonを入れてる
         let btn = document.getElementById('button');
 
+        // 変数btnがクリックされたらfunctionが動くよ！
         btn.onclick = function() {
+            // birdのclassに.actionをつける それによりcssのbird.actionが動くよ！
             bird.classList.toggle("action");
+            // アラート
             alert('鳥が飛びます！')
         }
     </script>

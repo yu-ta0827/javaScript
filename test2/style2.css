@@ -1,0 +1,39 @@
+#image {
+    position: relative;
+}
+#circle {
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+#text {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    line-height: 400px;
+}
+#circle:hover {
+    opacity: 0.9;
+}
+/* イメージ画像 */
+#syateki.action {
+    display:none;
+}
+#oyaji {
+    display:none;
+}
+#oyaji.action {
+    display:block;
+}
+#atari {
+    display:none;
+}
+#atari.action {
+    display:block;
+}

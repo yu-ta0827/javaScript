@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="image">
+        <img id="syateki" src="omatsuri_syateki.png" alt="">
+        <img id="oyaji" src="family_kyouiku_suparuta.png" alt="">
+        <img id="atari" src="kuji_atari.png" alt="">
+        <div>※全部で５種類</div>
+        <div id="circle">
+            <div id="text">射的をやる</div>
+        </div>
+    </div>
+    <script>
+        // 変数
+        let btn = document.getElementById('text');
+        let syateki = document.getElementById('syateki');
+        let oyajiImg = document.getElementById('oyaji');
+        let atariImg = document.getElementById('atari');
+        // ボタンが押された際のアクション
+        btn.addEventListener('click', function() {
+            let get = ['大当たり！','ハズレ','弾切れ','鉄砲が壊れた','親父に弾が当たった'];
+            let random =Math.floor( Math.random() * 5 )
+            btn.textContent = get[random];
+            // 画像のactionをボタンを押すたびに一度取り除く
+            syateki.classList.remove("action");
+            oyajiImg.classList.remove("action");
+            atariImg.classList.remove("action");
+            // 大当たりの場合画像を変更 
+            if (btn.textContent === get[0]) {
+                syateki.classList.toggle("action");
+                atariImg.classList.toggle("action");
+            } 
+            // 玉が屋台の親父に！の場合画像変更
+            if (btn.textContent === get[4]) {
+                syateki.classList.toggle("action");
+                oyajiImg.classList.toggle("action");
+            } 
+        }, false);
+    </script>
+</body>
+</html>
